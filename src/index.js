@@ -14,6 +14,7 @@ import LoadingContainer from './layouts/loading/LoadingContainer'
 import ComplexStorage from './../build/contracts/ComplexStorage.json'
 import SimpleStorage from './../build/contracts/SimpleStorage.json'
 import TutorialToken from './../build/contracts/TutorialToken.json'
+import Random from './../build/contracts/Random.json'
 
 // Redux Store
 import store from './store'
@@ -33,7 +34,8 @@ const options = {
   contracts: [
     ComplexStorage,
     SimpleStorage,
-    TutorialToken
+    TutorialToken,
+    Random
   ],
   events: {
     SimpleStorage: ['StorageSet']

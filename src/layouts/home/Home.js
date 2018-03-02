@@ -14,7 +14,7 @@ class Home extends Component {
 
             <br/><br/>
           </div>
-        
+
           <div className="pure-u-1-1">
             <h2>SimpleStorage</h2>
             <p>This shows a simple ContractData component with no arguments, along with a form to set its value.</p>
@@ -41,6 +41,15 @@ class Home extends Component {
             <p><strong>String 1</strong>: <ContractData contract="ComplexStorage" method="string1" toUtf8 /></p>
             <p><strong>String 2</strong>: <ContractData contract="ComplexStorage" method="string2" toUtf8 /></p>
             <strong>Single Device Data</strong>: <ContractData contract="ComplexStorage" method="singleDD" />
+
+            <br/><br/>
+          </div>
+
+          <div className="pure-u-1-1">
+            <h2>Random</h2>
+            <p>This should show a naive pseudorandom number based on the blockhash.</p>
+            <p><strong>Random Value</strong>: <ContractData contract="Random" method="number" /></p>
+            <ContractForm contract="Random" method="set" />
 
             <br/><br/>
           </div>

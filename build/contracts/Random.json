@@ -4,7 +4,7 @@
     {
       "constant": true,
       "inputs": [],
-      "name": "number",
+      "name": "alive",
       "outputs": [
         {
           "name": "",
@@ -18,18 +18,18 @@
     {
       "constant": false,
       "inputs": [],
-      "name": "set",
+      "name": "observe",
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b60c48061001d6000396000f30060606040526004361060485763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638381f58a8114604d578063b8e010de14606f575b600080fd5b3415605757600080fd5b605d6081565b60405190815260200160405180910390f35b3415607957600080fd5b607f6087565b005b60005481565b6001600a43600019014006016000555600a165627a7a72305820c600584ad3fe82a563fb65a79a5b311e64ee25ee94aae2eb5d00b4dc98f2f0600029",
-  "deployedBytecode": "0x60606040526004361060485763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638381f58a8114604d578063b8e010de14606f575b600080fd5b3415605757600080fd5b605d6081565b60405190815260200160405180910390f35b3415607957600080fd5b607f6087565b005b60005481565b6001600a43600019014006016000555600a165627a7a72305820c600584ad3fe82a563fb65a79a5b311e64ee25ee94aae2eb5d00b4dc98f2f0600029",
-  "sourceMap": "25:185:0:-;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "25:185:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;47:18;;;;;;;;;;;;;;;;;;;;;;;;;;;72:136;;;;;;;;;;;;;;47:18;;;;:::o;72:136::-;168:1;163:2;146:12;-1:-1:-1;;146:14:0;130:31;125:40;:44;104:18;179:22;72:136::o",
-  "source": "pragma solidity ^0.4.18;\ncontract Random {\n    uint public number;\n\n    function set() public {\n        uint random_number = uint(block.blockhash(block.number-1))%10 + 1;\n        number = random_number;\n    }\n}\n",
+  "bytecode": "0x6060604052341561000f57600080fd5b60c48061001d6000396000f30060606040526004361060485763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166314fc78fc8114604d578063753899e914605f575b600080fd5b3415605757600080fd5b605d6081565b005b3415606957600080fd5b606f6092565b60405190815260200160405180910390f35b6001600a4360001901400601600055565b600054815600a165627a7a723058205b365f492c1970627c4216efeea037149363d68b2651c4830eb1693912d1ba790029",
+  "deployedBytecode": "0x60606040526004361060485763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166314fc78fc8114604d578063753899e914605f575b600080fd5b3415605757600080fd5b605d6081565b005b3415606957600080fd5b606f6092565b60405190815260200160405180910390f35b6001600a4360001901400601600055565b600054815600a165627a7a723058205b365f492c1970627c4216efeea037149363d68b2651c4830eb1693912d1ba790029",
+  "sourceMap": "25:187:0:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "25:187:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;71:139;;;;;;;;;;;;;;47:17;;;;;;;;;;;;;;;;;;;;;;;;;;;71:139;171:1;166:2;149:12;-1:-1:-1;;149:14:0;133:31;128:40;:44;107:18;182:21;71:139::o;47:17::-;;;;:::o",
+  "source": "pragma solidity ^0.4.18;\ncontract Random {\n    uint public alive;\n\n    function observe() public {\n        uint random_number = uint(block.blockhash(block.number-1))%10 + 1;\n        alive = random_number;\n    }\n}\n",
   "sourcePath": "/Users/j/Coding/cryptokittybox/contracts/Random.sol",
   "ast": {
     "attributes": {
@@ -75,7 +75,7 @@
           {
             "attributes": {
               "constant": false,
-              "name": "number",
+              "name": "alive",
               "scope": 28,
               "stateVariable": true,
               "storageLocation": "default",
@@ -96,7 +96,7 @@
             ],
             "id": 3,
             "name": "VariableDeclaration",
-            "src": "47:18:0"
+            "src": "47:17:0"
           },
           {
             "attributes": {
@@ -106,7 +106,7 @@
               "modifiers": [
                 null
               ],
-              "name": "set",
+              "name": "observe",
               "payable": false,
               "scope": 28,
               "stateMutability": "nonpayable",
@@ -123,7 +123,7 @@
                 "children": [],
                 "id": 4,
                 "name": "ParameterList",
-                "src": "84:2:0"
+                "src": "87:2:0"
               },
               {
                 "attributes": {
@@ -134,7 +134,7 @@
                 "children": [],
                 "id": 5,
                 "name": "ParameterList",
-                "src": "94:0:0"
+                "src": "97:0:0"
               },
               {
                 "children": [
@@ -164,12 +164,12 @@
                             },
                             "id": 6,
                             "name": "ElementaryTypeName",
-                            "src": "104:4:0"
+                            "src": "107:4:0"
                           }
                         ],
                         "id": 7,
                         "name": "VariableDeclaration",
-                        "src": "104:18:0"
+                        "src": "107:18:0"
                       },
                       {
                         "attributes": {
@@ -233,7 +233,7 @@
                                     },
                                     "id": 8,
                                     "name": "ElementaryTypeNameExpression",
-                                    "src": "125:4:0"
+                                    "src": "128:4:0"
                                   },
                                   {
                                     "attributes": {
@@ -279,12 +279,12 @@
                                             },
                                             "id": 9,
                                             "name": "Identifier",
-                                            "src": "130:5:0"
+                                            "src": "133:5:0"
                                           }
                                         ],
                                         "id": 10,
                                         "name": "MemberAccess",
-                                        "src": "130:15:0"
+                                        "src": "133:15:0"
                                       },
                                       {
                                         "attributes": {
@@ -325,12 +325,12 @@
                                                 },
                                                 "id": 11,
                                                 "name": "Identifier",
-                                                "src": "146:5:0"
+                                                "src": "149:5:0"
                                               }
                                             ],
                                             "id": 12,
                                             "name": "MemberAccess",
-                                            "src": "146:12:0"
+                                            "src": "149:12:0"
                                           },
                                           {
                                             "attributes": {
@@ -347,22 +347,22 @@
                                             },
                                             "id": 13,
                                             "name": "Literal",
-                                            "src": "159:1:0"
+                                            "src": "162:1:0"
                                           }
                                         ],
                                         "id": 14,
                                         "name": "BinaryOperation",
-                                        "src": "146:14:0"
+                                        "src": "149:14:0"
                                       }
                                     ],
                                     "id": 15,
                                     "name": "FunctionCall",
-                                    "src": "130:31:0"
+                                    "src": "133:31:0"
                                   }
                                 ],
                                 "id": 16,
                                 "name": "FunctionCall",
-                                "src": "125:37:0"
+                                "src": "128:37:0"
                               },
                               {
                                 "attributes": {
@@ -379,12 +379,12 @@
                                 },
                                 "id": 17,
                                 "name": "Literal",
-                                "src": "163:2:0"
+                                "src": "166:2:0"
                               }
                             ],
                             "id": 18,
                             "name": "BinaryOperation",
-                            "src": "125:40:0"
+                            "src": "128:40:0"
                           },
                           {
                             "attributes": {
@@ -401,17 +401,17 @@
                             },
                             "id": 19,
                             "name": "Literal",
-                            "src": "168:1:0"
+                            "src": "171:1:0"
                           }
                         ],
                         "id": 20,
                         "name": "BinaryOperation",
-                        "src": "125:44:0"
+                        "src": "128:44:0"
                       }
                     ],
                     "id": 21,
                     "name": "VariableDeclarationStatement",
-                    "src": "104:65:0"
+                    "src": "107:65:0"
                   },
                   {
                     "children": [
@@ -434,11 +434,11 @@
                               ],
                               "referencedDeclaration": 3,
                               "type": "uint256",
-                              "value": "number"
+                              "value": "alive"
                             },
                             "id": 22,
                             "name": "Identifier",
-                            "src": "179:6:0"
+                            "src": "182:5:0"
                           },
                           {
                             "attributes": {
@@ -452,37 +452,37 @@
                             },
                             "id": 23,
                             "name": "Identifier",
-                            "src": "188:13:0"
+                            "src": "190:13:0"
                           }
                         ],
                         "id": 24,
                         "name": "Assignment",
-                        "src": "179:22:0"
+                        "src": "182:21:0"
                       }
                     ],
                     "id": 25,
                     "name": "ExpressionStatement",
-                    "src": "179:22:0"
+                    "src": "182:21:0"
                   }
                 ],
                 "id": 26,
                 "name": "Block",
-                "src": "94:114:0"
+                "src": "97:113:0"
               }
             ],
             "id": 27,
             "name": "FunctionDefinition",
-            "src": "72:136:0"
+            "src": "71:139:0"
           }
         ],
         "id": 28,
         "name": "ContractDefinition",
-        "src": "25:185:0"
+        "src": "25:187:0"
       }
     ],
     "id": 29,
     "name": "SourceUnit",
-    "src": "0:211:0"
+    "src": "0:213:0"
   },
   "compiler": {
     "name": "solc",
@@ -508,8 +508,18 @@
       "events": {},
       "links": {},
       "address": "0xfd6162e97f321256b4040d006716404dc7281443"
+    },
+    "1520012799738": {
+      "events": {},
+      "links": {},
+      "address": "0x6f8717289418d1f4578f3c60457826ed7a03c0c4"
+    },
+    "1520013625068": {
+      "events": {},
+      "links": {},
+      "address": "0x6fd93428f3d033cf8e892e4fe125fd125c2e8166"
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-03-02T16:25:33.008Z"
+  "updatedAt": "2018-03-02T18:02:14.075Z"
 }

@@ -1,9 +1,9 @@
 pragma solidity ^0.4.18;
 contract Random {
-    uint public number;
+    uint public alive;
 
-    function set() public {
+    function observe() public {
         uint random_number = uint(block.blockhash(block.number-1))%10 + 1;
-        number = random_number;
+        alive = random_number;
     }
 }

@@ -1,14 +1,14 @@
 pragma solidity ^0.4.18;
 contract Random {
   string public lastCat;
-  uint[] public deadForNow;
+  uint[] public sematary;
 
   function getListLength() constant returns (uint) {
-    return deadForNow.length;
+    return sematary.length;
   }
 
   function mostRecentlyDeceased() constant returns (uint) {
-    return deadForNow[(deadForNow.length - 1)];
+    return sematary[(sematary.length - 1)];
   }
 
   function observe(uint catId) public {
@@ -18,7 +18,7 @@ contract Random {
       lastCat = 'Alive';
     } else {
       lastCat = 'Dead';
-      deadForNow.push(catId);
+      sematary.push(catId);
     }
   }
 }

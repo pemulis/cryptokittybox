@@ -53,7 +53,7 @@
       "absolutePath": "/Users/j/Coding/cryptokittybox/contracts/SimpleStorage.sol",
       "exportedSymbols": {
         "SimpleStorage": [
-          301
+          315
         ]
       }
     },
@@ -67,7 +67,7 @@
             ".18"
           ]
         },
-        "id": 280,
+        "id": 294,
         "name": "PragmaDirective",
         "src": "0:24:4"
       },
@@ -83,10 +83,10 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            301
+            315
           ],
           "name": "SimpleStorage",
-          "scope": 302
+          "scope": 316
         },
         "children": [
           {
@@ -102,7 +102,7 @@
                       "constant": false,
                       "indexed": false,
                       "name": "_message",
-                      "scope": 284,
+                      "scope": 298,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "string memory",
@@ -115,22 +115,22 @@
                           "name": "string",
                           "type": "string storage pointer"
                         },
-                        "id": 281,
+                        "id": 295,
                         "name": "ElementaryTypeName",
                         "src": "75:6:4"
                       }
                     ],
-                    "id": 282,
+                    "id": 296,
                     "name": "VariableDeclaration",
                     "src": "75:15:4"
                   }
                 ],
-                "id": 283,
+                "id": 297,
                 "name": "ParameterList",
                 "src": "69:25:4"
               }
             ],
-            "id": 284,
+            "id": 298,
             "name": "EventDefinition",
             "src": "53:42:4"
           },
@@ -138,7 +138,7 @@
             "attributes": {
               "constant": false,
               "name": "storedData",
-              "scope": 301,
+              "scope": 315,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -151,12 +151,12 @@
                   "name": "uint",
                   "type": "uint256"
                 },
-                "id": 285,
+                "id": 299,
                 "name": "ElementaryTypeName",
                 "src": "99:4:4"
               }
             ],
-            "id": 286,
+            "id": 300,
             "name": "VariableDeclaration",
             "src": "99:22:4"
           },
@@ -170,7 +170,7 @@
               ],
               "name": "set",
               "payable": false,
-              "scope": 301,
+              "scope": 315,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -182,7 +182,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "x",
-                      "scope": 300,
+                      "scope": 314,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -195,17 +195,17 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 287,
+                        "id": 301,
                         "name": "ElementaryTypeName",
                         "src": "139:4:4"
                       }
                     ],
-                    "id": 288,
+                    "id": 302,
                     "name": "VariableDeclaration",
                     "src": "139:6:4"
                   }
                 ],
-                "id": 289,
+                "id": 303,
                 "name": "ParameterList",
                 "src": "138:8:4"
               },
@@ -216,7 +216,7 @@
                   ]
                 },
                 "children": [],
-                "id": 290,
+                "id": 304,
                 "name": "ParameterList",
                 "src": "154:0:4"
               },
@@ -241,11 +241,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 286,
+                              "referencedDeclaration": 300,
                               "type": "uint256",
                               "value": "storedData"
                             },
-                            "id": 291,
+                            "id": 305,
                             "name": "Identifier",
                             "src": "160:10:4"
                           },
@@ -255,21 +255,21 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 288,
+                              "referencedDeclaration": 302,
                               "type": "uint256",
                               "value": "x"
                             },
-                            "id": 292,
+                            "id": 306,
                             "name": "Identifier",
                             "src": "173:1:4"
                           }
                         ],
-                        "id": 293,
+                        "id": 307,
                         "name": "Assignment",
                         "src": "160:14:4"
                       }
                     ],
-                    "id": 294,
+                    "id": 308,
                     "name": "ExpressionStatement",
                     "src": "160:14:4"
                   },
@@ -301,11 +301,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 284,
+                              "referencedDeclaration": 298,
                               "type": "function (string memory)",
                               "value": "StorageSet"
                             },
-                            "id": 295,
+                            "id": 309,
                             "name": "Identifier",
                             "src": "181:10:4"
                           },
@@ -322,37 +322,37 @@
                               "type": "literal_string \"Data stored successfully!\"",
                               "value": "Data stored successfully!"
                             },
-                            "id": 296,
+                            "id": 310,
                             "name": "Literal",
                             "src": "192:27:4"
                           }
                         ],
-                        "id": 297,
+                        "id": 311,
                         "name": "FunctionCall",
                         "src": "181:39:4"
                       }
                     ],
-                    "id": 298,
+                    "id": 312,
                     "name": "ExpressionStatement",
                     "src": "181:39:4"
                   }
                 ],
-                "id": 299,
+                "id": 313,
                 "name": "Block",
                 "src": "154:71:4"
               }
             ],
-            "id": 300,
+            "id": 314,
             "name": "FunctionDefinition",
             "src": "126:99:4"
           }
         ],
-        "id": 301,
+        "id": 315,
         "name": "ContractDefinition",
         "src": "26:201:4"
       }
     ],
-    "id": 302,
+    "id": 316,
     "name": "SourceUnit",
     "src": "0:228:4"
   },
@@ -364,9 +364,9 @@
     "1520112416654": {
       "events": {},
       "links": {},
-      "address": "0x2b0ee60d7017e842469c0575f5fecbf1a2bf72fc"
+      "address": "0xc5583279c2b49a2f8926e4fb2b146f3f478b4aac"
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-03-03T22:05:32.434Z"
+  "updatedAt": "2018-03-03T22:23:45.259Z"
 }

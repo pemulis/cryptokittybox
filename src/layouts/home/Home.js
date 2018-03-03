@@ -14,10 +14,10 @@ class Home extends Component {
 
             <br/><br/>
           </div>
-          
+
           <div className="pure-u-1-1">
             <h2>Random</h2>
-            <p>This should show a naive pseudorandom number based on the blockhash.</p>
+            <p>This should show show "Alive" or "Dead" based on whether a naive pseudorandom number based on the blockhash is divisible by 2.</p>
             <p><strong>Alive</strong>: <ContractData contract="Random" method="alive" /></p>
             <ContractForm contract="Random" method="observe" />
 

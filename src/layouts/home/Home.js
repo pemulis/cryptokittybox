@@ -18,7 +18,9 @@ class Home extends Component {
           <div className="pure-u-1-1">
             <h2>Random</h2>
             <p>This should show show "Alive" or "Dead" based on whether a naive pseudorandom number based on the blockhash is divisible by 2.</p>
-            <p><strong>Alive</strong>: <ContractData contract="Random" method="alive" /></p>
+            <p><strong>Last Cat, Alive or Dead?</strong>: <ContractData contract="Random" method="alive" /></p>
+            <strong>Dead For Now</strong>: <ContractData contract="Random" method="getList" />
+            <br /><br />
             <ContractForm contract="Random" method="observe" />
 
             <br/><br/>

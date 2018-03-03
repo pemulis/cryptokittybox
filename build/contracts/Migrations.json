@@ -220,7 +220,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 773,
+                                  "referencedDeclaration": 861,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -357,7 +357,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 773,
+                                  "referencedDeclaration": 861,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -816,77 +816,12 @@
     "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
   },
   "networks": {
-    "1519936439656": {
+    "1520112416654": {
       "events": {},
       "links": {},
-      "address": "0xb8d50a20acf962934f963fe203b3a9648d5fdb47"
-    },
-    "1519940802404": {
-      "events": {},
-      "links": {},
-      "address": "0xa4831547be37873ba7c65e8c0380578442e7bce2"
-    },
-    "1519973562662": {
-      "events": {},
-      "links": {},
-      "address": "0x29c0033aee74fd59d4a0793cf889a4222eac5197"
-    },
-    "1520003572904": {
-      "events": {},
-      "links": {},
-      "address": "0xd3c638cdb68d79f51372651be773a18926980194"
-    },
-    "1520005130078": {
-      "events": {},
-      "links": {},
-      "address": "0xb7ad8e92f52bb02d509bb6e593b9d32c3d6c32fe"
-    },
-    "1520007001887": {
-      "events": {},
-      "links": {},
-      "address": "0xd836231db60fe8cf97d6a62d32aa87efe886871c"
-    },
-    "1520007797754": {
-      "events": {},
-      "links": {},
-      "address": "0x80ee5294fb4c758c68a5a7ca5c1cb04e8f3fd52d"
-    },
-    "1520012799738": {
-      "events": {},
-      "links": {},
-      "address": "0xdef9dee205ec5fe263889fb507ad3668baba424e"
-    },
-    "1520013625068": {
-      "events": {},
-      "links": {},
-      "address": "0xdfc70e72a459d633033726474dee41b90485f5bb"
-    },
-    "1520033540265": {
-      "events": {},
-      "links": {},
-      "address": "0x9dac3eeac9a7a84473a61cffe7930d7a3202da2c"
-    },
-    "1520034679095": {
-      "events": {},
-      "links": {},
-      "address": "0x4e65633923878317c60032f7f770d171a76e30ce"
-    },
-    "1520035705784": {
-      "events": {},
-      "links": {},
-      "address": "0x3c2671c92c312c8874482c970e556cca86647d7f"
-    },
-    "1520036195075": {
-      "events": {},
-      "links": {},
-      "address": "0x0d1129ca4229ba28dcc423146f3cd4734fc523fe"
-    },
-    "1520102853665": {
-      "events": {},
-      "links": {},
-      "address": "0x8b24d4eecf8fc3c9bb83c0763069c4d0a7e32302"
+      "address": "0xcf44c213d84c011ccb3cb5d85fd0c47fb1400a56"
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-03-03T18:49:27.834Z"
+  "updatedAt": "2018-03-03T22:05:38.533Z"
 }

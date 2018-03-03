@@ -1,0 +1,326 @@
+{
+  "contractName": "Ransom",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "safe",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "catnapper",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "price",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "backer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "catId",
+          "type": "uint256"
+        }
+      ],
+      "name": "PayRansom",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b61013f8061001e6000396000f3006060604052600436106100565763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663016f94b0811461005b5780634c18076114610083578063a035b1fe146100bf575b600080fd5b341561006657600080fd5b6100716004356100d2565b60405190815260200160405180910390f35b341561008e57600080fd5b6100966100f1565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b34156100ca57600080fd5b61007161010d565b60028054829081106100e057fe5b600091825260209091200154905081565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b600154815600a165627a7a72305820fd1146136be7e55446a135318633d554860b5f357726b61330dcf7dc488bfeef0029",
+  "deployedBytecode": "0x6060604052600436106100565763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663016f94b0811461005b5780634c18076114610083578063a035b1fe146100bf575b600080fd5b341561006657600080fd5b6100716004356100d2565b60405190815260200160405180910390f35b341561008e57600080fd5b6100966100f1565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b34156100ca57600080fd5b61007161010d565b60028054829081106100e057fe5b600091825260209091200154905081565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b600154815600a165627a7a72305820fd1146136be7e55446a135318633d554860b5f357726b61330dcf7dc488bfeef0029",
+  "sourceMap": "25:348:3:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "25:348:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;94:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;45:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;73:17;;;;;;;;;;;;94:18;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;94:18:3;:::o;45:24::-;;;;;;:::o;73:17::-;;;;:::o",
+  "source": "pragma solidity ^0.4.18;\ncontract Ransom {\n  address public catnapper;\n  uint public price;\n  uint[] public safe;\n\n  event PayRansom(address backer, uint amount, uint catId);\n\n  /* Constructor function */\n  /*\n  function Ransom (\n    address ifSuccessfulSendTo,\n    uint ransomPrice\n  ) {\n    catnapper = if ifSuccessfulSendTo;\n    price = ransomPrice * 1 ether;\n  }\n  */\n}\n",
+  "sourcePath": "/Users/j/Coding/cryptokittybox/contracts/Ransom.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/j/Coding/cryptokittybox/contracts/Ransom.sol",
+      "exportedSymbols": {
+        "Ransom": [
+          278
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 262,
+        "name": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            278
+          ],
+          "name": "Ransom",
+          "scope": 279
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "catnapper",
+              "scope": 278,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "type": "address"
+                },
+                "id": 263,
+                "name": "ElementaryTypeName",
+                "src": "45:7:3"
+              }
+            ],
+            "id": 264,
+            "name": "VariableDeclaration",
+            "src": "45:24:3"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "price",
+              "scope": 278,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 265,
+                "name": "ElementaryTypeName",
+                "src": "73:4:3"
+              }
+            ],
+            "id": 266,
+            "name": "VariableDeclaration",
+            "src": "73:17:3"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "safe",
+              "scope": 278,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256[] storage ref",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "uint256[] storage pointer"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 267,
+                    "name": "ElementaryTypeName",
+                    "src": "94:4:3"
+                  }
+                ],
+                "id": 268,
+                "name": "ArrayTypeName",
+                "src": "94:6:3"
+              }
+            ],
+            "id": 269,
+            "name": "VariableDeclaration",
+            "src": "94:18:3"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "name": "PayRansom"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "backer",
+                      "scope": 277,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 270,
+                        "name": "ElementaryTypeName",
+                        "src": "133:7:3"
+                      }
+                    ],
+                    "id": 271,
+                    "name": "VariableDeclaration",
+                    "src": "133:14:3"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "amount",
+                      "scope": 277,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 272,
+                        "name": "ElementaryTypeName",
+                        "src": "149:4:3"
+                      }
+                    ],
+                    "id": 273,
+                    "name": "VariableDeclaration",
+                    "src": "149:11:3"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "catId",
+                      "scope": 277,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 274,
+                        "name": "ElementaryTypeName",
+                        "src": "162:4:3"
+                      }
+                    ],
+                    "id": 275,
+                    "name": "VariableDeclaration",
+                    "src": "162:10:3"
+                  }
+                ],
+                "id": 276,
+                "name": "ParameterList",
+                "src": "132:41:3"
+              }
+            ],
+            "id": 277,
+            "name": "EventDefinition",
+            "src": "117:57:3"
+          }
+        ],
+        "id": 278,
+        "name": "ContractDefinition",
+        "src": "25:348:3"
+      }
+    ],
+    "id": 279,
+    "name": "SourceUnit",
+    "src": "0:374:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-03-03T22:05:07.989Z"
+}

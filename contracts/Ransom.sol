@@ -7,6 +7,7 @@ contract Ransom {
   event PayRansom(address backer, uint amount, uint catId);
 
   /* Constructor function */
+  /*
   function Ransom (
     address ifSuccessfulSendTo,
     uint ransomPrice
@@ -14,4 +15,5 @@ contract Ransom {
     catnapper = if ifSuccessfulSendTo;
     price = ransomPrice * 1 ether;
   }
+  */
 }

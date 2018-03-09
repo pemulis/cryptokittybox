@@ -3,11 +3,11 @@ contract Random {
   string public lastCat;
   uint[] public sematary;
 
-  function getListLength() constant returns (uint) {
+  function getListLength() public view returns (uint) {
     return sematary.length;
   }
 
-  function mostRecentlyDeceased() constant returns (uint) {
+  function mostRecentlyDeceased() public view returns (uint) {
     return sematary[(sematary.length - 1)];
   }
 

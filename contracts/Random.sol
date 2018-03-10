@@ -3,6 +3,8 @@ contract Random {
   string public lastCat;
   uint[] public sematary;
 
+  mapping (uint => string) public catState;
+
   function getListLength() public view returns (uint) {
     return sematary.length;
   }
@@ -16,8 +18,10 @@ contract Random {
     bool divis = bool((random_number%2) == 0);
     if (divis == true) {
       lastCat = 'Alive';
+      catState[catId] = 'Alive';
     } else {
       lastCat = 'Dead';
+      catState[catId] = 'Alive';
       sematary.push(catId);
     }
   }

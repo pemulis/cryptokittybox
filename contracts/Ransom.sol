@@ -1,5 +1,8 @@
 pragma solidity ^0.4.18;
-contract Ransom {
+
+import "./KittyBox.sol";
+
+contract Ransom is KittyBox {
   address public catnapper;
   uint public price;
   uint[] public safe;

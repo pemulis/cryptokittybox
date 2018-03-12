@@ -37,7 +37,49 @@
     {
       "constant": true,
       "inputs": [],
+      "name": "mostRecentlyDeceased",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "catId",
+          "type": "uint256"
+        }
+      ],
+      "name": "observe",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
       "name": "price",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getListLength",
       "outputs": [
         {
           "name": "",
@@ -71,18 +113,18 @@
       "type": "event"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b61013f8061001e6000396000f3006060604052600436106100565763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663016f94b0811461005b5780634c18076114610083578063a035b1fe146100bf575b600080fd5b341561006657600080fd5b6100716004356100d2565b60405190815260200160405180910390f35b341561008e57600080fd5b6100966100f1565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b34156100ca57600080fd5b61007161010d565b60028054829081106100e057fe5b600091825260209091200154905081565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b600154815600a165627a7a72305820fd1146136be7e55446a135318633d554860b5f357726b61330dcf7dc488bfeef0029",
-  "deployedBytecode": "0x6060604052600436106100565763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663016f94b0811461005b5780634c18076114610083578063a035b1fe146100bf575b600080fd5b341561006657600080fd5b6100716004356100d2565b60405190815260200160405180910390f35b341561008e57600080fd5b6100966100f1565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b34156100ca57600080fd5b61007161010d565b60028054829081106100e057fe5b600091825260209091200154905081565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b600154815600a165627a7a72305820fd1146136be7e55446a135318633d554860b5f357726b61330dcf7dc488bfeef0029",
-  "sourceMap": "25:348:3:-;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "25:348:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;94:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;45:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;73:17;;;;;;;;;;;;94:18;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;94:18:3;:::o;45:24::-;;;;;;:::o;73:17::-;;;;:::o",
-  "source": "pragma solidity ^0.4.18;\ncontract Ransom {\n  address public catnapper;\n  uint public price;\n  uint[] public safe;\n\n  event PayRansom(address backer, uint amount, uint catId);\n\n  /* Constructor function */\n  /*\n  function Ransom (\n    address ifSuccessfulSendTo,\n    uint ransomPrice\n  ) {\n    catnapper = if ifSuccessfulSendTo;\n    price = ransomPrice * 1 ether;\n  }\n  */\n}\n",
+  "bytecode": "0x6060604052341561000f57600080fd5b6104208061001e6000396000f3006060604052600436106100775763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663016f94b0811461007c5780634c180761146100a4578063767f60da146100e057806380020513146100f3578063a035b1fe1461010b578063b65c531b1461011e575b600080fd5b341561008757600080fd5b610092600435610131565b60405190815260200160405180910390f35b34156100af57600080fd5b6100b7610150565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b34156100eb57600080fd5b61009261016c565b34156100fe57600080fd5b610109600435610194565b005b341561011657600080fd5b610092610313565b341561012957600080fd5b610092610319565b600580548290811061013f57fe5b600091825260209091200154905081565b60035473ffffffffffffffffffffffffffffffffffffffff1681565b6001805460009190600019810190811061018257fe5b90600052602060002090015490505b90565b600061019e61031f565b90506001811515141561024f5760408051908101604052600581527f416c697665000000000000000000000000000000000000000000000000000000602082015260009080516101f2929160200190610337565b50604080519081016040908152600582527f416c6976650000000000000000000000000000000000000000000000000000006020808401919091526000858152600290915220908051610249929160200190610337565b5061030f565b60408051908101604052600481527f446561640000000000000000000000000000000000000000000000000000000060208201526000908051610296929160200190610337565b50604080519081016040908152600582527f416c69766500000000000000000000000000000000000000000000000000000060208084019190915260008581526002909152209080516102ed929160200190610337565b50600180548082016102ff83826103b1565b5060009182526020909120018290555b5050565b60045481565b60015490565b60026001600a436000190140060190810615905b5090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061037857805160ff19168380011785556103a5565b828001600101855582156103a5579182015b828111156103a557825182559160200191906001019061038a565b506103339291506103da565b8154818355818115116103d5576000838152602090206103d59181019083016103da565b505050565b61019191905b8082111561033357600081556001016103e05600a165627a7a723058202d5df3ccbabe6099b177b14ef73223133c2efe3aadc5d3f6b70a283bc510185b0029",
+  "deployedBytecode": "0x6060604052600436106100775763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663016f94b0811461007c5780634c180761146100a4578063767f60da146100e057806380020513146100f3578063a035b1fe1461010b578063b65c531b1461011e575b600080fd5b341561008757600080fd5b610092600435610131565b60405190815260200160405180910390f35b34156100af57600080fd5b6100b7610150565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b34156100eb57600080fd5b61009261016c565b34156100fe57600080fd5b610109600435610194565b005b341561011657600080fd5b610092610313565b341561012957600080fd5b610092610319565b600580548290811061013f57fe5b600091825260209091200154905081565b60035473ffffffffffffffffffffffffffffffffffffffff1681565b6001805460009190600019810190811061018257fe5b90600052602060002090015490505b90565b600061019e61031f565b90506001811515141561024f5760408051908101604052600581527f416c697665000000000000000000000000000000000000000000000000000000602082015260009080516101f2929160200190610337565b50604080519081016040908152600582527f416c6976650000000000000000000000000000000000000000000000000000006020808401919091526000858152600290915220908051610249929160200190610337565b5061030f565b60408051908101604052600481527f446561640000000000000000000000000000000000000000000000000000000060208201526000908051610296929160200190610337565b50604080519081016040908152600582527f416c69766500000000000000000000000000000000000000000000000000000060208084019190915260008581526002909152209080516102ed929160200190610337565b50600180548082016102ff83826103b1565b5060009182526020909120018290555b5050565b60045481565b60015490565b60026001600a436000190140060190810615905b5090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061037857805160ff19168380011785556103a5565b828001600101855582156103a5579182015b828111156103a557825182559160200191906001019061038a565b506103339291506103da565b8154818355818115116103d5576000838152602090206103d59181019083016103da565b505050565b61019191905b8082111561033357600081556001016103e05600a165627a7a723058202d5df3ccbabe6099b177b14ef73223133c2efe3aadc5d3f6b70a283bc510185b0029",
+  "sourceMap": "52:360:2:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "52:360:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;133:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;84:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;274:108:0;;;;;;;;;;;;386:265;;;;;;;;;;;;;;;;112:17:2;;;;;;;;;;;;185:85:0;;;;;;;;;;;;133:18:2;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;133:18:2;:::o;84:24::-;;;;;;:::o;274:108:0:-;346:8;356:15;;327:4;;346:8;-1:-1:-1;;356:19:0;;;346:31;;;;;;;;;;;;;;;339:38;;274:108;;:::o;386:265::-;428:11;442:16;:14;:16::i;:::-;428:30;-1:-1:-1;478:4:0;468:14;;;;464:183;;;492:17;;;;;;;;;;;;;;;;-1:-1:-1;;492:17:0;;;;;;;;;:::i;:::-;;517:25;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;517:15:0;;;:8;:15;;;;;:25;;;;;;;;;:::i;:::-;;464:183;;;563:16;;;;;;;;;;;;;;;;-1:-1:-1;;563:16:0;;;;;;;;;:::i;:::-;;587:25;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;587:15:0;;;:8;:15;;;;;:25;;;;;;;;;:::i;:::-;-1:-1:-1;620:8:0;:20;;;;;;:8;:20;;:::i;:::-;-1:-1:-1;620:20:0;;;;;;;;;;;;464:183;386:265;;:::o;112:17:2:-;;;;:::o;185:85:0:-;250:8;:15;185:85;:::o;45:179:1:-;211:1;171;166:2;149:12;-1:-1:-1;;149:14:1;133:31;128:40;:44;191:21;;;190:28;;45:179;;;:::o;52:360:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;52:360:2;;;-1:-1:-1;52:360:2;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;:::o;:::-;;;;;;;;;;;;;;;;;",
+  "source": "pragma solidity ^0.4.18;\n\nimport \"./KittyBox.sol\";\n\ncontract Ransom is KittyBox {\n  address public catnapper;\n  uint public price;\n  uint[] public safe;\n\n  event PayRansom(address backer, uint amount, uint catId);\n\n  /* Constructor function */\n  /*\n  function Ransom (\n    address ifSuccessfulSendTo,\n    uint ransomPrice\n  ) {\n    catnapper = if ifSuccessfulSendTo;\n    price = ransomPrice * 1 ether;\n  }\n  */\n}\n",
   "sourcePath": "/Users/j/Coding/cryptokittybox/contracts/Ransom.sol",
   "ast": {
     "attributes": {
       "absolutePath": "/Users/j/Coding/cryptokittybox/contracts/Ransom.sol",
       "exportedSymbols": {
         "Ransom": [
-          287
+          135
         ]
       }
     },
@@ -96,33 +138,71 @@
             ".18"
           ]
         },
-        "id": 271,
+        "id": 116,
         "name": "PragmaDirective",
-        "src": "0:24:3"
+        "src": "0:24:2"
       },
       {
         "attributes": {
-          "baseContracts": [
+          "SourceUnit": 81,
+          "absolutePath": "/Users/j/Coding/cryptokittybox/contracts/KittyBox.sol",
+          "file": "./KittyBox.sol",
+          "scope": 136,
+          "symbolAliases": [
             null
           ],
+          "unitAlias": ""
+        },
+        "id": 117,
+        "name": "ImportDirective",
+        "src": "26:24:2"
+      },
+      {
+        "attributes": {
           "contractDependencies": [
-            null
+            80,
+            114
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            287
+            135,
+            80,
+            114
           ],
           "name": "Ransom",
-          "scope": 288
+          "scope": 136
         },
         "children": [
           {
             "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "KittyBox",
+                  "referencedDeclaration": 80,
+                  "type": "contract KittyBox"
+                },
+                "id": 118,
+                "name": "UserDefinedTypeName",
+                "src": "71:8:2"
+              }
+            ],
+            "id": 119,
+            "name": "InheritanceSpecifier",
+            "src": "71:8:2"
+          },
+          {
+            "attributes": {
               "constant": false,
               "name": "catnapper",
-              "scope": 287,
+              "scope": 135,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "address",
@@ -135,20 +215,20 @@
                   "name": "address",
                   "type": "address"
                 },
-                "id": 272,
+                "id": 120,
                 "name": "ElementaryTypeName",
-                "src": "45:7:3"
+                "src": "84:7:2"
               }
             ],
-            "id": 273,
+            "id": 121,
             "name": "VariableDeclaration",
-            "src": "45:24:3"
+            "src": "84:24:2"
           },
           {
             "attributes": {
               "constant": false,
               "name": "price",
-              "scope": 287,
+              "scope": 135,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -161,20 +241,20 @@
                   "name": "uint",
                   "type": "uint256"
                 },
-                "id": 274,
+                "id": 122,
                 "name": "ElementaryTypeName",
-                "src": "73:4:3"
+                "src": "112:4:2"
               }
             ],
-            "id": 275,
+            "id": 123,
             "name": "VariableDeclaration",
-            "src": "73:17:3"
+            "src": "112:17:2"
           },
           {
             "attributes": {
               "constant": false,
               "name": "safe",
-              "scope": 287,
+              "scope": 135,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256[] storage ref",
@@ -193,19 +273,19 @@
                       "name": "uint",
                       "type": "uint256"
                     },
-                    "id": 276,
+                    "id": 124,
                     "name": "ElementaryTypeName",
-                    "src": "94:4:3"
+                    "src": "133:4:2"
                   }
                 ],
-                "id": 277,
+                "id": 125,
                 "name": "ArrayTypeName",
-                "src": "94:6:3"
+                "src": "133:6:2"
               }
             ],
-            "id": 278,
+            "id": 126,
             "name": "VariableDeclaration",
-            "src": "94:18:3"
+            "src": "133:18:2"
           },
           {
             "attributes": {
@@ -220,7 +300,7 @@
                       "constant": false,
                       "indexed": false,
                       "name": "backer",
-                      "scope": 286,
+                      "scope": 134,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -233,21 +313,21 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 279,
+                        "id": 127,
                         "name": "ElementaryTypeName",
-                        "src": "133:7:3"
+                        "src": "172:7:2"
                       }
                     ],
-                    "id": 280,
+                    "id": 128,
                     "name": "VariableDeclaration",
-                    "src": "133:14:3"
+                    "src": "172:14:2"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "indexed": false,
                       "name": "amount",
-                      "scope": 286,
+                      "scope": 134,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -260,21 +340,21 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 281,
+                        "id": 129,
                         "name": "ElementaryTypeName",
-                        "src": "149:4:3"
+                        "src": "188:4:2"
                       }
                     ],
-                    "id": 282,
+                    "id": 130,
                     "name": "VariableDeclaration",
-                    "src": "149:11:3"
+                    "src": "188:11:2"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "indexed": false,
                       "name": "catId",
-                      "scope": 286,
+                      "scope": 134,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -287,34 +367,34 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 283,
+                        "id": 131,
                         "name": "ElementaryTypeName",
-                        "src": "162:4:3"
+                        "src": "201:4:2"
                       }
                     ],
-                    "id": 284,
+                    "id": 132,
                     "name": "VariableDeclaration",
-                    "src": "162:10:3"
+                    "src": "201:10:2"
                   }
                 ],
-                "id": 285,
+                "id": 133,
                 "name": "ParameterList",
-                "src": "132:41:3"
+                "src": "171:41:2"
               }
             ],
-            "id": 286,
+            "id": 134,
             "name": "EventDefinition",
-            "src": "117:57:3"
+            "src": "156:57:2"
           }
         ],
-        "id": 287,
+        "id": 135,
         "name": "ContractDefinition",
-        "src": "25:348:3"
+        "src": "52:360:2"
       }
     ],
-    "id": 288,
+    "id": 136,
     "name": "SourceUnit",
-    "src": "0:374:3"
+    "src": "0:413:2"
   },
   "compiler": {
     "name": "solc",
@@ -322,5 +402,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-03-03T23:11:17.022Z"
+  "updatedAt": "2018-03-12T21:25:36.536Z"
 }

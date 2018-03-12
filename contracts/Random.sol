@@ -1,9 +1,9 @@
 pragma solidity ^0.4.18;
 contract Random {
-  string public lastCat;
-  uint[] public sematary;
+  string internal lastCat;
+  uint[] internal sematary;
 
-  mapping (uint => string) public catState;
+  mapping (uint => string) internal catState;
 
   function getListLength() public view returns (uint) {
     return sematary.length;

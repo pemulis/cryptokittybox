@@ -1,9 +1,9 @@
-var SimpleStorage = artifacts.require("./SimpleStorage.sol");
-var TutorialToken = artifacts.require("./TutorialToken.sol");
-var ComplexStorage = artifacts.require("./ComplexStorage.sol");
+var Random = artifacts.require("./Random.sol");
+var Random = artifacts.require("./KittyBox.sol");
+var Random = artifacts.require("./Ransom.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(SimpleStorage);
-  deployer.deploy(TutorialToken);
-  deployer.deploy(ComplexStorage);
+  deployer.deploy(Random);
+  deployer.deploy(KittyBox);
+  deployer.deploy(Ransom);
 };

@@ -13,16 +13,16 @@ contract Random {
     return sematary[(sematary.length - 1)];
   }
 
-  function observe(uint _catId) public {
+  function observe(uint catId) public {
     uint _pseudoRandomNumber = uint(block.blockhash(block.number-1))%10 + 1;
     bool _divis = bool((_pseudoRandomNumber%2) == 0);
     if (_divis == true) {
       lastCat = 'Alive';
-      catState[_catId] = 'Alive';
+      catState[catId] = 'Alive';
     } else {
       lastCat = 'Dead';
-      catState[_catId] = 'Alive';
-      sematary.push(_catId);
+      catState[catId] = 'Alive';
+      sematary.push(catId);
     }
   }
 }

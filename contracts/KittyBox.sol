@@ -3,7 +3,7 @@ pragma solidity ^0.4.18;
 import "./Random.sol";
 
 contract KittyBox is Random {
-  string internal lastCat;
+  string public lastCat;
   uint[] internal sematary;
 
   mapping (uint => string) internal catState;

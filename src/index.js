@@ -11,10 +11,9 @@ import HomeContainer from './layouts/home/HomeContainer'
 import LoadingContainer from './layouts/loading/LoadingContainer'
 
 // Contracts
-import ComplexStorage from './../build/contracts/ComplexStorage.json'
-import SimpleStorage from './../build/contracts/SimpleStorage.json'
-import TutorialToken from './../build/contracts/TutorialToken.json'
 import Random from './../build/contracts/Random.json'
+import KittyBox from './../build/contracts/KittyBox.json'
+import Ransom from './../build/contracts/KittyBox.json'
 
 // Redux Store
 import store from './store'
@@ -32,13 +31,11 @@ const options = {
     }
   },
   contracts: [
-    ComplexStorage,
-    SimpleStorage,
-    TutorialToken,
-    Random
+    Random,
+    KittyBox,
+    Ransom
   ],
   events: {
-    SimpleStorage: ['StorageSet']
   }
 }
 
